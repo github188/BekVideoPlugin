@@ -1,0 +1,10 @@
+# Windows:
+*.suo
+*.sdf
+*.opensdf
+*.VC.db
+*.VC.opendb
+ipch
+Debug
+Release
+Output

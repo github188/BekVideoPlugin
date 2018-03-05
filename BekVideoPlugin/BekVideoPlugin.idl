@@ -1,0 +1,49 @@
+// BekVideoPlugin.idl : ActiveX 控件项目的类型库源。
+
+// 此文件将由 MIDL 编译器工具处理以
+// 产生类型库(BekVideoPlugin.tlb)，该类型库将成为
+// BekVideoPlugin.ocx.
+
+#include <olectl.h>
+#include <idispids.h>
+
+[ uuid(FC71C06D-2BE1-451A-A53D-7B67A8EF3ADB), version(1.0),
+  control ]
+library BekVideoPluginLib
+{
+	importlib(STDOLE_TLB);
+
+	//  CBekVideoPluginCtrl 的主调度接口
+	[ 
+		uuid(F5A5DCD7-34C5-44CD-8EF9-23A4BB8808FB)	
+	]
+	dispinterface _DBekVideoPlugin
+	{
+		properties:
+		methods:
+	};
+
+	//  CBekVideoPluginCtrl 的事件调度接口
+
+	[ 
+		uuid(5C6621D6-F2F1-4602-A9E4-18982B30D504)	
+	]
+	dispinterface _DBekVideoPluginEvents
+	{
+		properties:
+			//  事件接口没有任何属性
+
+		methods:
+	};
+
+	//  CBekVideoPluginCtrl 的类信息
+	[
+		uuid(1EFF5809-3926-4D69-89F0-BB2A5D1C1435)
+	]
+	coclass BekVideoPlugin
+	{
+		[default] dispinterface _DBekVideoPlugin;
+		[default, source] dispinterface _DBekVideoPluginEvents;
+	};
+
+};
